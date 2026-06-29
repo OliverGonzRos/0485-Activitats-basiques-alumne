@@ -1,0 +1,9 @@
+// Activitat 10 — Hores, minuts i segons
+public class HoresMinutsSegons {
+    public static void main(String[] args) {
+        // TODO: llegeix un nombre de segons i mostra:
+        //   Hores: ...
+        //   Minuts: ...
+        //   Segons: ...
+    }
+}

@@ -1,0 +1,124 @@
+{
+  "tests": [
+    {
+      "name": "01 - Mostra les teves dades",
+      "setup": "mvn -q -B compile",
+      "run": "java -cp target/classes MostraDades",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "02 - AvaluarExpressions",
+      "setup": "",
+      "run": "java -cp target/classes AvaluarExpressions",
+      "input": "",
+      "output": "-18\n-4\n10\n-7\n0\n53",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "03 - Magia numerica",
+      "setup": "",
+      "run": "java -cp target/classes MagiaNumerica",
+      "input": "7",
+      "output": "El resultat és 2",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "04 - Perimetre i area del quadrat",
+      "setup": "",
+      "run": "java -cp target/classes Quadrat",
+      "input": "7",
+      "output": "Perímetre del quadrat = 28\nÀrea del quadrat = 49",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "05 - Operacions aritmetiques",
+      "setup": "",
+      "run": "java -cp target/classes OperacionsMatematiques",
+      "input": "4 2",
+      "output": "4 + 2 = 6\n4 - 2 = 2\n4 * 2 = 8\n4 / 2 = 2",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "06 - Perimetre i area del rectangle",
+      "setup": "",
+      "run": "java -cp target/classes Rectangle",
+      "input": "7 2",
+      "output": "Perímetre del rectangle = 18\nÀrea del rectangle = 14",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "07 - Convertir temperatura (F a C)",
+      "setup": "",
+      "run": "java -cp target/classes Temperatura",
+      "input": "212",
+      "output": "100.0",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "08 - Suma i mitjana de 4 enters",
+      "setup": "",
+      "run": "java -cp target/classes SumaMitjana",
+      "input": "1 2 3 4",
+      "output": "Suma = 10\nMitjana = 2.5",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "09 - Preu a pagar",
+      "setup": "",
+      "run": "java -cp target/classes PreuAPagar",
+      "input": "2 4.5 10",
+      "output": "El valor a pagar serà: 8.1 euros",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "10 - Hores, minuts i segons",
+      "setup": "",
+      "run": "java -cp target/classes HoresMinutsSegons",
+      "input": "41668",
+      "output": "Hores: 11\nMinuts: 34\nSegons: 28",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "11 - Intercanvi",
+      "setup": "",
+      "run": "java -cp target/classes Intercanvi",
+      "input": "3 7",
+      "output": "a = 7\nb = 3",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "12 - Monedes minimes",
+      "setup": "",
+      "run": "java -cp target/classes MonedesMinimes",
+      "input": "123",
+      "output": "0 monedes de 2 euros\n1 monedes d'1 euro\n0 monedes de 50 cèntims\n1 monedes de 20 cèntims\n0 monedes de 10 cèntims\n0 monedes de 5 cèntims\n1 moneda de 2 cèntims\n1 moneda de 1 cèntims",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    }
+  ]
+}

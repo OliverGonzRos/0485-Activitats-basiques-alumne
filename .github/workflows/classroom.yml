@@ -1,0 +1,188 @@
+name: Autograding Tests
+on:
+  push:
+  workflow_dispatch:
+  repository_dispatch:
+
+permissions:
+  checks: write
+  actions: read
+  contents: read
+
+jobs:
+  run-autograding-tests:
+    runs-on: ubuntu-latest
+    if: github.actor != 'github-classroom[bot]'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+          cache: maven
+
+      - name: "01 - Mostra les teves dades"
+        id: t01
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "01 - Mostra les teves dades"
+          setup-command: "mvn -q -B compile"
+          command: "java -cp target/classes MostraDades"
+          input: ""
+          expected-output: ""
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "02 - AvaluarExpressions"
+        id: t02
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "02 - AvaluarExpressions"
+          setup-command: ""
+          command: "java -cp target/classes AvaluarExpressions"
+          input: ""
+          expected-output: "-18\n-4\n10\n-7\n0\n53"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "03 - Magia numerica"
+        id: t03
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "03 - Magia numerica"
+          setup-command: ""
+          command: "java -cp target/classes MagiaNumerica"
+          input: "7"
+          expected-output: "El resultat és 2"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "04 - Perimetre i area del quadrat"
+        id: t04
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "04 - Perimetre i area del quadrat"
+          setup-command: ""
+          command: "java -cp target/classes Quadrat"
+          input: "7"
+          expected-output: "Perímetre del quadrat = 28\nÀrea del quadrat = 49"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "05 - Operacions aritmetiques"
+        id: t05
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "05 - Operacions aritmetiques"
+          setup-command: ""
+          command: "java -cp target/classes OperacionsMatematiques"
+          input: "4 2"
+          expected-output: "4 + 2 = 6\n4 - 2 = 2\n4 * 2 = 8\n4 / 2 = 2"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "06 - Perimetre i area del rectangle"
+        id: t06
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "06 - Perimetre i area del rectangle"
+          setup-command: ""
+          command: "java -cp target/classes Rectangle"
+          input: "7 2"
+          expected-output: "Perímetre del rectangle = 18\nÀrea del rectangle = 14"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "07 - Convertir temperatura (F a C)"
+        id: t07
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "07 - Convertir temperatura (F a C)"
+          setup-command: ""
+          command: "java -cp target/classes Temperatura"
+          input: "212"
+          expected-output: "100.0"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "08 - Suma i mitjana de 4 enters"
+        id: t08
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "08 - Suma i mitjana de 4 enters"
+          setup-command: ""
+          command: "java -cp target/classes SumaMitjana"
+          input: "1 2 3 4"
+          expected-output: "Suma = 10\nMitjana = 2.5"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "09 - Preu a pagar"
+        id: t09
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "09 - Preu a pagar"
+          setup-command: ""
+          command: "java -cp target/classes PreuAPagar"
+          input: "2 4.5 10"
+          expected-output: "El valor a pagar serà: 8.1 euros"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "10 - Hores, minuts i segons"
+        id: t10
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "10 - Hores, minuts i segons"
+          setup-command: ""
+          command: "java -cp target/classes HoresMinutsSegons"
+          input: "41668"
+          expected-output: "Hores: 11\nMinuts: 34\nSegons: 28"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "11 - Intercanvi"
+        id: t11
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "11 - Intercanvi"
+          setup-command: ""
+          command: "java -cp target/classes Intercanvi"
+          input: "3 7"
+          expected-output: "a = 7\nb = 3"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+      - name: "12 - Monedes minimes"
+        id: t12
+        uses: classroom-resources/autograding-io-grader@v1
+        with:
+          test-name: "12 - Monedes minimes"
+          setup-command: ""
+          command: "java -cp target/classes MonedesMinimes"
+          input: "123"
+          expected-output: "0 monedes de 2 euros\n1 monedes d'1 euro\n0 monedes de 50 cèntims\n1 monedes de 20 cèntims\n0 monedes de 10 cèntims\n0 monedes de 5 cèntims\n1 moneda de 2 cèntims\n1 moneda de 1 cèntims"
+          comparison-method: included
+          timeout: 1
+          max-score: 5
+
+      - name: Autograding Reporter
+        uses: classroom-resources/autograding-grading-reporter@v1
+        env:
+          T01_RESULTS: "${{steps.t01.outputs.result}}"
+          T02_RESULTS: "${{steps.t02.outputs.result}}"
+          T03_RESULTS: "${{steps.t03.outputs.result}}"
+          T04_RESULTS: "${{steps.t04.outputs.result}}"
+          T05_RESULTS: "${{steps.t05.outputs.result}}"
+          T06_RESULTS: "${{steps.t06.outputs.result}}"
+          T07_RESULTS: "${{steps.t07.outputs.result}}"
+          T08_RESULTS: "${{steps.t08.outputs.result}}"
+          T09_RESULTS: "${{steps.t09.outputs.result}}"
+          T10_RESULTS: "${{steps.t10.outputs.result}}"
+          T11_RESULTS: "${{steps.t11.outputs.result}}"
+          T12_RESULTS: "${{steps.t12.outputs.result}}"
+        with:
+          runners: t01,t02,t03,t04,t05,t06,t07,t08,t09,t10,t11,t12
