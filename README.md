@@ -8,7 +8,14 @@ Els fitxers són a `src/main/java/`.
 
 1. Obre la carpeta a **VS Code** (accepta instal·lar les extensions recomanades).
 2. Implementa cada programa.
-3. Prova'l: ▶ *Run* a VS Code, o per consola `mvn -q compile` i `java -cp target/classes NomClasse`.
+3. Prova'l:
+   - **A VS Code** (més fàcil): prem ▶ *Run* just a sobre del mètode `main` de la classe.
+   - **Per consola** (no cal tenir Maven instal·lat, només el JDK):
+     ```
+     javac -d target/classes src/main/java/*.java
+     java -cp target/classes NomClasse
+     ```
+     (substitueix `NomClasse` pel nom de la classe que vulguis provar, per exemple `MostraDades`).
 4. Fes `commit` i `push` quan vulguis desar la teva feina (pots fer-ho tantes vegades
    com vulguis). No hi ha cap correcció automàtica: el professor revisarà el teu codi
    més endavant. Abans d'entregar, comprova tu mateix cada programa (▶ *Run* a VS Code)
