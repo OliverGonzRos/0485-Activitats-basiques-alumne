@@ -4,14 +4,6 @@ Cada activitat és un programa Java amb un `main`. La majoria llegeixen dades de
 (amb `Scanner`) i escriuen el resultat per pantalla (amb `System.out.println`).
 Els fitxers són a `src/main/java/`.
 
-## Regla d'or de la sortida
-
-El professor revisarà el que imprimeix el teu programa comparant-lo amb el resultat esperat, seguint una rúbrica:
-
-- Imprimeix exactament en el format que indica cada enunciat (mateixes etiquetes i ordre).
-- Si una activitat demana diversos resultats, imprimeix-los un per línia.
-- Per als decimals, escriu-los amb **punt** (`4.5`), no amb coma.
-
 ## Com treballar
 
 1. Obre la carpeta a **VS Code** (accepta instal·lar les extensions recomanades).
@@ -22,24 +14,22 @@ El professor revisarà el que imprimeix el teu programa comparant-lo amb el resu
    més endavant. Abans d'entregar, comprova tu mateix cada programa (▶ *Run* a VS Code)
    amb diferents valors d'entrada, no només amb l'exemple de l'enunciat.
 
-## Activitats (5 punts cadascuna · total 60)
+## Activitats (10 punts cadascuna · total 120)
 
-| #  | Classe | Entrada (exemple) | Sortida esperada |
-|----|--------|-------------------|------------------|
-| 01 | `MostraDades` | (cap) | 3 línies amb les teves dades |
-| 02 | `AvaluarExpressions` | (cap) | `-18` / `-4` / `10` / `-7` / `0` / `53` |
-| 03 | `MagiaNumerica` | `7` | `El resultat és 2` |
-| 04 | `Quadrat` | `7` | `Perímetre del quadrat = 28` / `Àrea del quadrat = 49` |
-| 05 | `OperacionsMatematiques` | `4 2` | `4 + 2 = 6` / `4 - 2 = 2` / `4 * 2 = 8` / `4 / 2 = 2` |
-| 06 | `Rectangle` | `7 2` | `Perímetre del rectangle = 18` / `Àrea del rectangle = 14` |
-| 07 | `Temperatura` | `212` | `100.0` |
-| 08 | `SumaMitjana` | `1 2 3 4` | `Suma = 10` / `Mitjana = 2.5` |
-| 09 | `PreuAPagar` | `2 4.5 10` | `El valor a pagar serà: 8.1 euros` |
-| 10 | `HoresMinutsSegons` | `41668` | `Hores: 11` / `Minuts: 34` / `Segons: 28` |
-| 11 | `Intercanvi` | `3 7` | `a = 7` / `b = 3` |
-| 12 | `MonedesMinimes` | `123` | 8 línies (vegeu enunciat) |
-
-*(El símbol `/` separa línies de sortida diferents.)*
+| #  | Classe | Puntuació |
+|----|--------|-----------|
+| 01 | `MostraDades` | 10 |
+| 02 | `AvaluarExpressions` | 10 |
+| 03 | `MagiaNumerica` | 10 |
+| 04 | `Quadrat` | 10 |
+| 05 | `OperacionsMatematiques` | 10 |
+| 06 | `Rectangle` | 10 |
+| 07 | `Temperatura` | 10 |
+| 08 | `SumaMitjana` | 10 |
+| 09 | `PreuAPagar` | 10 |
+| 10 | `HoresMinutsSegons` | 10 |
+| 11 | `Intercanvi` | 10 |
+| 12 | `MonedesMinimes` | 10 |
 
 ## Enunciats
 
@@ -68,9 +58,26 @@ d * 23 - 1 + b
 
 Pensa primer quin valor donarà cada càlcul, tenint en compte la prioritat de les operacions.
 
+Exemple de sortida (amb aquests valors de `a`, `b`, `c`, `d`):
+
+```
+-18
+-4
+10
+-7
+0
+53
+```
+
 ### 03 — Màgia numèrica (`MagiaNumerica`)
 Tria un número, multiplica'l per 3, suma-li 6, divideix el resultat entre 3 i resta-li el
 número inicial. Quin és el resultat? Màgia: el resultat és **2** sempre.
+
+Exemple: si tries el número `7`, el programa mostra:
+
+```
+El resultat és 2
+```
 
 ### 04 — Àrea i perímetre del quadrat (`Quadrat`)
 Partint del valor d'un costat (`int costat`), calcula el perímetre i l'àrea i mostra'ls:
@@ -97,12 +104,28 @@ de 2 valors enters:
 Partint dels dos costats d'un rectangle (`costatGran`, `costatPetit`), calcula el perímetre
 (costat gran per 2 més costat petit per 2) i l'àrea (costat gran pel costat petit).
 
+Exemple (`costatGran = 7`, `costatPetit = 2`):
+
+```
+Perímetre del rectangle = 18
+Àrea del rectangle = 14
+```
+
 ### 07 — Convertir temperatura (`Temperatura`)
 Desa en una variable real un número que representa una temperatura en graus Fahrenheit i
 converteix-la a graus Celsius: `temperatureC = ((temperatureF - 32) * 5) / 9;`
 
+Exemple: `212` (graus Fahrenheit) dona `100.0` (graus Celsius).
+
 ### 08 — Suma i mitjana (`SumaMitjana`)
 Calcula la suma i la mitjana aritmètica de 4 valors enters introduïts per teclat.
+
+Exemple (amb `1 2 3 4`):
+
+```
+Suma = 10
+Mitjana = 2.5
+```
 
 ### 09 — Preu a pagar (`PreuAPagar`)
 Entrant per teclat el nombre d'unitats comprades, el preu unitari i un percentatge de
@@ -130,6 +153,13 @@ Exemple: `41668` → `Hores: 11`, `Minuts: 34`, `Segons: 28`.
 ### 11 — Intercanvi (`Intercanvi`)
 Intercanvia el valor de dues variables (necessitaràs una variable auxiliar) i mostra el valor
 de les variables després de l'intercanvi per comprovar que s'han intercanviat correctament.
+
+Exemple (`a = 3`, `b = 7`):
+
+```
+a = 7
+b = 3
+```
 
 ### 12 — Monedes mínimes (`MonedesMinimes`)
 Demana una quantitat entera de diners (en cèntims d'euro) i mostra la quantitat mínima de
