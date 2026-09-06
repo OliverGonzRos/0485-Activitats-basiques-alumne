@@ -11,10 +11,16 @@ Els fitxers són a `src/main/java/`.
 3. Prova'l:
    - **A VS Code** (més fàcil): prem ▶ *Run* just a sobre del mètode `main` de la classe.
    - **Per consola** (no cal tenir Maven instal·lat, només el JDK):
-     ```
-     javac -d target/classes src/main/java/*.java
-     java -cp target/classes NomClasse
-     ```
+     - Només la classe que estiguis provant (més ràpid):
+       ```
+       javac -d target/classes src/main/java/NomClasse.java
+       java -cp target/classes NomClasse
+       ```
+     - Totes les classes de cop:
+       ```
+       javac -d target/classes src/main/java/*.java
+       java -cp target/classes NomClasse
+       ```
      (substitueix `NomClasse` pel nom de la classe que vulguis provar, per exemple `MostraDades`).
 4. Fes `commit` i `push` quan vulguis desar la teva feina (pots fer-ho tantes vegades
    com vulguis). No hi ha cap correcció automàtica: el professor revisarà el teu codi
