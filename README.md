@@ -6,7 +6,7 @@ Els fitxers són a `src/main/java/`.
 
 ## Regla d'or de la sortida
 
-La correcció automàtica compara el que imprimeix el teu programa amb el resultat esperat:
+El professor revisarà el que imprimeix el teu programa comparant-lo amb el resultat esperat, seguint una rúbrica:
 
 - Imprimeix exactament en el format que indica cada enunciat (mateixes etiquetes i ordre).
 - Si una activitat demana diversos resultats, imprimeix-los un per línia.
@@ -17,7 +17,10 @@ La correcció automàtica compara el que imprimeix el teu programa amb el result
 1. Obre la carpeta a **VS Code** (accepta instal·lar les extensions recomanades).
 2. Implementa cada programa.
 3. Prova'l: ▶ *Run* a VS Code, o per consola `mvn -q compile` i `java -cp target/classes NomClasse`.
-4. Fes `commit` i `push`. A cada `push`, GitHub corregeix i veuràs el resultat a **Actions**.
+4. Fes `commit` i `push` quan vulguis desar la teva feina (pots fer-ho tantes vegades
+   com vulguis). No hi ha cap correcció automàtica: el professor revisarà el teu codi
+   més endavant. Abans d'entregar, comprova tu mateix cada programa (▶ *Run* a VS Code)
+   amb diferents valors d'entrada, no només amb l'exemple de l'enunciat.
 
 ## Activitats (5 punts cadascuna · total 60)
 
