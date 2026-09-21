@@ -6,5 +6,8 @@ public class MostraDades {
         //   El meu nom és Ana Garcia Lladonosa
         //   L'any passat vaig estudiar Batxillerat
         //   Tinc 19 anys
+        System.out.println("El meu nom és Oliver Gonzalez Rosales");
+        System.out.println("Fa anys vaig estudiar altre grau superior");
+        System.out.println("Tinc 24 anys");
     }
 }

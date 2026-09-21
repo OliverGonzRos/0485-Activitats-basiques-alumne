@@ -1,3 +1,6 @@
+
+import java.util.Scanner;
+
 // Activitat 12 — Monedes mínimes
 public class MonedesMinimes {
     public static void main(String[] args) {
@@ -12,5 +15,8 @@ public class MonedesMinimes {
         //   0 monedes de 5 cèntims
         //   1 moneda de 2 cèntims
         //   1 moneda de 1 cèntims
+
+        Scanner teclat = new Scanner(System.in);
+        
     }
 }
