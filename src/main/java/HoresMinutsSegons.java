@@ -17,6 +17,7 @@ public class HoresMinutsSegons {
         int hores = segons / 3600;
         System.out.println("Hores:"+ hores);
         segons = segons % 3600;
+        // el segons = segons % 3600 es para guardar el resto
 
         int minuts = segons / 60;
         System.out.println("Minuts:"+ minuts);
