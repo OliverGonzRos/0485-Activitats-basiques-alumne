@@ -12,6 +12,6 @@ public class MagiaNumerica {
         int numero = teclat.nextInt();
 
         System.out.println("El resultat es:");
-        System.out.println((numero * 3 + 6) / 3 - 2);
+        System.out.println((numero * 3 + 6) / 3 - numero);
     }
 }
